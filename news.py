@@ -36,7 +36,7 @@ class NewsGui:
         news = NewsReader()
         self.articles = news.fetch()
         for o in self.articles:
-            self.label = Label(self.master, text=o)
+            self.label = Label(self.master, text=o[0] + " - " + o[1])
             self.label.pack()
             self.labels.append(self.label)
         
